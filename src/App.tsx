@@ -209,13 +209,13 @@ const Hero = () => {
         className="absolute inset-0 z-0 pointer-events-none"
       >
         <img 
-          src="/imagem/banner01desktop.png" 
+          src="/imagens_banner/banner_desktop.png" 
           alt="Banner Principal"
           className="hidden md:block w-full h-full object-cover scale-105"
           loading="lazy"
         />
         <img 
-          src="/imagem/banner01mobile.png" 
+          src="/imagens_banner/banner_mobile.jpg" 
           alt="Banner Principal Mobile"
           className="block md:hidden w-full h-full object-cover scale-105"
           loading="lazy"
