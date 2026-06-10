@@ -498,7 +498,7 @@ const Services = () => {
     { 
       title: 'Fachadas de vidro', 
       desc: 'Sua empresa com imponência colossal e máximo bem-estar interno através de vidros com filtro de calor solar.', 
-      img: '/imagem/fachada de vidro.png',
+      img: '/imagem/fachada_de_vidro.png',
       whatsappMsg: 'Olá! Tenho interesse em um projeto corporativo para Fachada de vidro.'
     },
     { 
