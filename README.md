@@ -1,6 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# DUNO Engenharia - Projeto React
+
+Este repositório contém o site da DUNO Engenharia, desenvolvido com **React**, **Vite** e **Tailwind CSS**.
+
+## Imagens
+
+- As imagens de banner (desktop e mobile) e os ícones dos cards de serviços foram adicionadas na pasta **public/imagem**.
+- O código já está configurado para referenciá‑las usando caminhos como `/imagem/banner01desktop.png` e `/imagem/vidracaria_servico_1.png`.
+
+> **Importante**: após adicionar ou atualizar imagens, reinicie o servidor de desenvolvimento (`npm run dev`) para que o Vite as sirva corretamente.
+
+## Como rodar
+```bash
+npm install
+npm run dev   # abre http://localhost:3000
+```
+
+## Build para produção
+```bash
+npm run build   # gera a pasta dist
+npm run preview # visualiza o build
+```
 
 # Run and deploy your AI Studio app
 

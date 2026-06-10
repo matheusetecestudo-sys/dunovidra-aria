@@ -208,21 +208,17 @@ const Hero = () => {
         style={{ y: useTransform(useScroll().scrollYProgress, [0, 0.5], [0, 80]) }}
         className="absolute inset-0 z-0 pointer-events-none"
       >
-        <LazyLoadImage 
+        <img 
           src="/imagem/banner01desktop.png" 
           alt="Banner Principal"
-          effect="blur"
           className="hidden md:block w-full h-full object-cover scale-105"
-          wrapperClassName="hidden md:block w-full h-full"
-          referrerPolicy="no-referrer"
+          loading="lazy"
         />
-        <LazyLoadImage 
+        <img 
           src="/imagem/banner01mobile.png" 
           alt="Banner Principal Mobile"
-          effect="blur"
           className="block md:hidden w-full h-full object-cover scale-105"
-          wrapperClassName="block md:hidden w-full h-full"
-          referrerPolicy="no-referrer"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/60" />
       </motion.div>
@@ -552,13 +548,11 @@ const Services = () => {
       className="group bg-white rounded-[32px] overflow-hidden border border-blue-100 hover:border-blue-500 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
     >
       <div className="relative h-60 overflow-hidden">
-        <LazyLoadImage 
+        <img 
           src={s.img} 
           alt={s.title} 
-          effect="blur"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          wrapperClassName="w-full h-full"
-          referrerPolicy="no-referrer"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute top-4 right-4">
