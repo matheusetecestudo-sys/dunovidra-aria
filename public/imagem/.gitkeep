@@ -1,0 +1,3 @@
+# Este arquivo garante que a pasta /public/imagem/ seja preservada e enviada ao GitHub.
+# Adicione suas imagens nesta pasta (ex: public/imagem/logo.png).
+# No código React, você poderá utilizá-las diretamente como: "/imagem/logo.png"
