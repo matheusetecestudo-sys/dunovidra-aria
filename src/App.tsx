@@ -209,13 +209,13 @@ const Hero = () => {
         className="absolute inset-0 z-0 pointer-events-none"
       >
         <img 
-          src="/imagens_banner/banner_desktop.png" 
+          src="imagens_banner/banner_desktop.png" 
           alt="Banner Principal"
           className="hidden md:block w-full h-full object-cover scale-105"
           loading="lazy"
         />
         <img 
-          src="/imagens_banner/banner_mobile.jpg" 
+          src="imagens_banner/banner_mobile.jpg" 
           alt="Banner Principal Mobile"
           className="block md:hidden w-full h-full object-cover scale-105"
           loading="lazy"
@@ -467,25 +467,25 @@ const Services = () => {
     { 
       title: 'Box para banheiro', 
       desc: 'Segurança absoluta e elegância máxima para seu momento de banho com trilhos ultra suaves e vidros certificados.', 
-      img: '/imagem/vidracaria_servico_1.png',
+      img: 'imagem/vidracaria_servico_1.png',
       whatsappMsg: 'Olá! Gostaria de consultar o orçamento para instalação de Box para Banheiro sob medida.'
     },
     { 
       title: 'Janelas de vidro temperado', 
       desc: 'Mais isolamento termoacústico e alta resistência contra ventos fortes para a segurança total do seu lar.', 
-      img: '/imagem/vidracaria_servico_2.png',
+      img: 'imagem/vidracaria_servico_2.png',
       whatsappMsg: 'Olá! Gostaria de um orçamento para Janelas de vidro temperado sob medida.'
     },
     { 
       title: 'Espelhos sob medida', 
       desc: 'Gere sensação de amplitude e luxo em qualquer cômodo com lapidação uniforme e reflexão sem distorções.', 
-      img: '/imagem/vidracaria_servico_3.png',
+      img: 'imagem/vidracaria_servico_3.png',
       whatsappMsg: 'Olá! Gostaria de solicitar um orçamento para Espelhos sob medida de alta qualidade.'
     },
     { 
       title: 'Portas de vidro', 
       desc: 'Divida seus ambientes de forma inteligente mantendo a integração visual completa e movimento incrivelmente leve.', 
-      img: '/imagem/vidracaria_servico_4.png',
+      img: 'imagem/vidracaria_servico_4.png',
       whatsappMsg: 'Olá! Gostaria de solicitar o orçamento para Portas de vidro sob medida.'
     }
   ];
@@ -494,25 +494,25 @@ const Services = () => {
     { 
       title: 'Fachadas de vidro', 
       desc: 'Sua empresa com imponência colossal e máximo bem-estar interno através de vidros com filtro de calor solar.', 
-      img: '/imagem/fachada_de_vidro.png',
+      img: 'imagem/fachada_de_vidro.png',
       whatsappMsg: 'Olá! Tenho interesse em um projeto corporativo para Fachada de vidro.'
     },
     { 
       title: 'Divisórias de vidro', 
       desc: 'Privacidade garantida para reuniões sigilosas mantendo o design do escritório amplo e iluminado de ponta a ponta.', 
-      img: '/imagem/vidracaria_servico_6.png',
+      img: 'imagem/vidracaria_servico_6.png',
       whatsappMsg: 'Olá! Gostaria de realizar um orçamento para Divisórias de vidro corporativas.'
     },
     { 
       title: 'Corrimão e guarda-corpo', 
       desc: 'Garanta a proteção contra quedas com ancoragem técnica invisível e vidros blindados duplo laminados.', 
-      img: '/imagem/vidracaria_servico_7.png',
+      img: 'imagem/vidracaria_servico_7.png',
       whatsappMsg: 'Olá! Gostaria de solicitar um orçamento para Corrimão e guarda-corpo de vidro.'
     },
     { 
       title: 'Coberturas em vidro', 
       desc: 'Aproveite as áreas externas o ano todo com vidros laminados inquebráveis e vedação 100% estanque contra chuvas.', 
-      img: '/imagem/vidracaria_servico_8.png',
+      img: 'imagem/vidracaria_servico_8.png',
       whatsappMsg: 'Olá! Gostaria de orçar uma Cobertura em vidro moderna para área externa.'
     }
   ];
