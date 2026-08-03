@@ -457,28 +457,28 @@ const Services = () => {
   const residentialServices = [
     { 
       title: 'Box para Banheiro', 
-      desc: 'Segurança absoluta e elegância para seu banheiro. Roldanas aparente inox, vidro temperado de alta resistência e vedações herméticas.', 
+      desc: 'Segurança máxima e elegância sob medida com vidro temperado e trilhos ultra suaves.', 
       img: 'images/vidracaria_servico_1.png',
       tag: 'Mais Pedido',
       whatsappMsg: 'Olá! Gostaria de consultar o orçamento para instalação de Box para Banheiro sob medida.'
     },
     { 
       title: 'Janelas de Vidro', 
-      desc: 'Isolamento acústico superior e máxima iluminação natural. Vidro temperado certificado ABNT contra intempéries e ventos fortes.', 
+      desc: 'Isolamento acústico superior e máxima iluminação natural com padrão ABNT.', 
       img: 'images/vidracaria_servico_2.png',
       tag: 'Alta Resistência',
       whatsappMsg: 'Olá! Gostaria de um orçamento para Janelas de vidro temperado sob medida.'
     },
     { 
       title: 'Espelhos Sob Medida', 
-      desc: 'Amplitude, sofisticação e reflexão límpida sem distorções. Lapidação em bisotê, iluminação LED integrada e fixação segura.', 
+      desc: 'Amplitude e sofisticação sem distorções com lapidação fina e iluminação LED.', 
       img: 'images/vidracaria_servico_3.png',
       tag: 'Design Luxo',
       whatsappMsg: 'Olá! Gostaria de solicitar um orçamento para Espelhos sob medida de alta qualidade.'
     },
     { 
       title: 'Portas de Vidro', 
-      desc: 'Integração perfeita entre ambientes com suavidade no deslizamento. Sistemas pivotantes ou de correr sob medida para seu ambiente.', 
+      desc: 'Integração perfeita entre ambientes com sistemas de correr ou pivotante.', 
       img: 'images/vidracaria_servico_4.png',
       tag: 'Sob Medida',
       whatsappMsg: 'Olá! Gostaria de solicitar o orçamento para Portas de vidro sob medida.'
@@ -488,28 +488,28 @@ const Services = () => {
   const commercialServices = [
     { 
       title: 'Fachadas de Vidro', 
-      desc: 'Imponência corporativa com tecnologia em pele de vidro (Glazing) e vidros com proteção solar para redução térmica.', 
+      desc: 'Imponência corporativa com pele de vidro (Glazing) e proteção solar térmica.', 
       img: 'images/fachada_de_vidro.png',
       tag: 'Corporativo',
       whatsappMsg: 'Olá! Tenho interesse em um projeto corporativo para Fachada de vidro.'
     },
     { 
       title: 'Divisórias de Vidro', 
-      desc: 'Divisão acústica e privacidade para escritórios e salas de reunião, mantendo a luminosidade e elegância espacial.', 
+      desc: 'Privacidade acústica e iluminação para escritórios e salas de reunião.', 
       img: 'images/vidracaria_servico_6.png',
       tag: 'Escritórios',
       whatsappMsg: 'Olá! Gostaria de realizar um orçamento para Divisórias de vidro corporativas.'
     },
     { 
       title: 'Guarda-Corpo & Corrimão', 
-      desc: 'Proteção essencial para varandas, mezaninos e escadas. Ancoragem estrutural invisível com vidros laminados temperados.', 
+      desc: 'Proteção contra quedas em escadas e varandas com fixação embutida.', 
       img: 'images/vidracaria_servico_7.png',
       tag: 'Segurança ABNT',
       whatsappMsg: 'Olá! Gostaria de solicitar um orçamento para Corrimão e guarda-corpo de vidro.'
     },
     { 
       title: 'Coberturas de Vidro', 
-      desc: 'Aproveitamento total da iluminação natural com estanqueidade contra chuvas e barreira contra raios UV.', 
+      desc: 'Aproveitamento de luz natural com vedação 100% estanque contra chuvas.', 
       img: 'images/vidracaria_servico_8.png',
       tag: 'Área Externa',
       whatsappMsg: 'Olá! Gostaria de orçar uma Cobertura em vidro moderna para área externa.'
@@ -543,10 +543,10 @@ const Services = () => {
     <motion.div 
       key={s.title}
       variants={itemVariants}
-      whileHover={{ y: -8 }}
-      className="group bg-white rounded-3xl overflow-hidden border border-slate-200/80 hover:border-blue-500 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full relative"
+      whileHover={{ y: -6 }}
+      className="group bg-white rounded-3xl overflow-hidden border border-slate-200/80 hover:border-green-500 shadow-sm hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300 flex flex-col h-full relative"
     >
-      <div className="relative h-56 sm:h-52 overflow-hidden bg-slate-950">
+      <div className="relative h-48 overflow-hidden bg-slate-950">
         <img 
           src={s.img} 
           alt={s.title} 
@@ -557,22 +557,22 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
         
         <div className="absolute top-3.5 left-3.5 z-10">
-          <span className="bg-white/90 backdrop-blur-md text-blue-600 text-[11px] font-bold tracking-wide px-3 py-1 rounded-full shadow-sm">
+          <span className="bg-white/90 backdrop-blur-md text-emerald-700 text-[11px] font-bold tracking-wide px-3 py-1 rounded-full shadow-sm">
             {s.tag || 'Sob Medida'}
           </span>
         </div>
 
         <div className="absolute top-3.5 right-3.5 z-10">
-          <div className="w-8 h-8 bg-slate-900/50 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 group-hover:bg-blue-600 group-hover:border-blue-500 transition-colors">
+          <div className="w-8 h-8 bg-slate-900/50 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 group-hover:bg-green-500 group-hover:border-green-400 transition-colors">
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </div>
       </div>
       
-      <div className="p-6 flex flex-col flex-grow justify-between bg-white">
+      <div className="p-5 flex flex-col flex-grow justify-between bg-white">
         <div>
-          <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{s.title}</h3>
-          <p className="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-green-600 transition-colors tracking-tight">{s.title}</h3>
+          <p className="text-slate-500 text-xs leading-relaxed mb-4">
             {s.desc}
           </p>
         </div>
@@ -581,10 +581,10 @@ const Services = () => {
           href={`https://wa.me/5519987212422?text=${encodeURIComponent(s.whatsappMsg)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full group/btn inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
+          className="btn-whatsapp group/btn justify-center text-center text-xs font-semibold rounded-full py-3 px-4 shadow-md shadow-green-500/20"
         >
           <span>Pedir orçamento</span>
-          <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
         </a>
       </div>
     </motion.div>
