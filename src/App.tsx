@@ -81,6 +81,7 @@ const Navbar = () => {
     { name: 'Contato', href: '#contato' },
   ];
 
+  return (
     <>
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled && !isMobileMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-4'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex justify-between items-center">
