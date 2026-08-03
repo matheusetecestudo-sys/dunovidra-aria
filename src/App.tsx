@@ -101,7 +101,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="https://wa.me/5519994566887" 
+              href="https://wa.me/5519987212422" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-nav group"
@@ -256,7 +256,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start w-full"
           >
             <a 
-              href="https://wa.me/5519994566887?text=Olá!%20Gostaria%20de%2520fazer%20um%2520orçamento%2520rápido%2520para%20meu%20projeto." 
+              href="https://wa.me/5519987212422?text=Olá!%20Gostaria%20de%2520fazer%20um%2520orçamento%2520rápido%2520para%20meu%20projeto." 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp justify-center text-center text-md py-4 px-8 group font-semibold shadow-lg shadow-green-500/20 w-full sm:w-auto max-w-xs sm:max-w-none rounded-full"
@@ -538,16 +538,17 @@ const Services = () => {
       whileHover={{ y: -6 }}
       className="group bg-white rounded-2xl overflow-hidden border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/10 hover:shadow-xl transition-all duration-300 flex flex-col"
     >
-      <div className="relative h-44 overflow-hidden">
+      <div className="relative h-48 bg-slate-900/5 p-3 flex items-center justify-center overflow-hidden">
         <img 
           src={s.img} 
           alt={s.title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="absolute top-3 right-3">
-          <div className="w-8 h-8 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center text-white border border-white/30">
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <div className="absolute top-3 right-3 z-10">
+          <div className="w-8 h-8 bg-white/40 backdrop-blur-md rounded-lg flex items-center justify-center text-slate-800 border border-white/50 shadow-sm">
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
@@ -560,7 +561,7 @@ const Services = () => {
         </p>
         
         <a 
-          href={`https://wa.me/5519994566887?text=${encodeURIComponent(s.whatsappMsg)}`}
+          href={`https://wa.me/5519987212422?text=${encodeURIComponent(s.whatsappMsg)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-whatsapp group justify-center py-2.5 text-xs font-semibold"
@@ -636,7 +637,7 @@ const Services = () => {
               <p className="text-slate-400 max-w-xl">Atendemos construtoras, escritórios e condomínios com equipe própria credenciada e rapidez comercial superior.</p>
             </div>
             <a 
-              href="https://wa.me/5519994566887?text=Olá!%20Gostaria%20de%20solicitar%20um%20projeto%20corporativo%20de%20alta%20escala." 
+              href="https://wa.me/5519987212422?text=Olá!%20Gostaria%20de%20solicitar%20um%20projeto%20corporativo%20de%20alta%20escala." 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp group rounded-full"
@@ -987,7 +988,7 @@ const DeprecatedProjectGallery = () => {
                     {/* CTA */}
                     <div className="pt-6 border-t border-white/15">
                       <a
-                        href={`https://wa.me/5519994566887?text=Olá,%20gostaria%20de%20um%20projeto%20espetacular%20semelhante%20ao%20"${encodeURIComponent(selectedProject.title)}"%20que%20vi%20no%20portfólio.`}
+                        href={`https://wa.me/5519987212422?text=Olá,%20gostaria%20de%20um%20projeto%20espetacular%20semelhante%20ao%20"${encodeURIComponent(selectedProject.title)}"%20que%20vi%20no%20portfólio.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-whatsapp w-full group flex items-center justify-center gap-2 rounded-full"
@@ -1295,7 +1296,7 @@ const Differentials = () => {
 
             <div className="pt-2">
               <a 
-                href="https://wa.me/5519994566887" 
+                href="https://wa.me/5519987212422" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp group inline-flex rounded-full"
@@ -1544,7 +1545,7 @@ const Contact = () => {
               <Mail className="text-blue-400" />
             </div>
             <span className="text-xs uppercase tracking-widest text-slate-400 mb-1">E-mail Corporativo</span>
-            <p className="font-bold">homeglass.contato@gmail.com</p>
+            <p className="font-bold">dunoengenharia.contato@gmail.com</p>
           </motion.div>
           <motion.div variants={itemVariants} className="bg-brand-dark text-white p-8 rounded-3xl flex flex-col items-center text-center">
             <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
@@ -1588,7 +1589,7 @@ const Contact = () => {
 
             <div className="mt-10">
               <a 
-                href="https://wa.me/5519994566887" 
+                href="https://wa.me/5519987212422" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-whatsapp group rounded-full"
@@ -1695,7 +1696,7 @@ const FAQ = () => {
         >
           <p className="text-slate-500 mb-6 font-medium">Ainda tem alguma dúvida específica?</p>
           <a 
-            href="https://wa.me/5519994566887" 
+            href="https://wa.me/5519987212422" 
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp group rounded-full"
@@ -1718,7 +1719,7 @@ const FloatingWhatsApp = () => {
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        href="https://wa.me/5519994566887"
+        href="https://wa.me/5519987212422"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center group relative"
@@ -1841,10 +1842,10 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <span className="text-[10px] uppercase text-slate-500 block mb-1">Telefone</span>
-                <a href="tel:+5519994566887" className="text-xl font-bold hover:text-blue-400 transition-colors">+55 19 99456-6887</a>
+                <a href="tel:+5519987212422" className="text-xl font-bold hover:text-blue-400 transition-colors">(19) 98721-2422</a>
               </div>
               <a 
-                href="https://wa.me/5519994566887" 
+                href="https://wa.me/5519987212422" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp group rounded-full"
