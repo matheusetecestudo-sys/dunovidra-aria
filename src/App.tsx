@@ -81,62 +81,63 @@ const Navbar = () => {
     { name: 'Contato', href: '#contato' },
   ];
 
-  return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex justify-between items-center">
-        <a href="#home" className={`flex items-center transition-opacity hover:opacity-95 ${isScrolled ? 'text-brand-blue' : 'text-white'}`}>
-          <span className="font-display font-black text-2xl tracking-[0.25em]">DUNO</span>
-        </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className={`text-sm font-medium transition-colors hover:text-brand-blue ${isScrolled ? 'text-slate-600' : 'text-white/80 hover:text-white'}`}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a 
-            href="https://wa.me/5519994566887" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-nav group"
-          >
-            Orçamento rápido
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+    <>
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled && !isMobileMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-4'}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex justify-between items-center">
+          <a href="#home" className={`flex items-center transition-opacity hover:opacity-95 ${isScrolled && !isMobileMenuOpen ? 'text-brand-blue' : 'text-white'}`}>
+            <span className="font-display font-black text-2xl tracking-[0.25em]">DUNO</span>
           </a>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                className={`text-sm font-medium transition-colors hover:text-brand-blue ${isScrolled && !isMobileMenuOpen ? 'text-slate-600' : 'text-white/80 hover:text-white'}`}
+              >
+                {link.name}
+              </a>
+            ))}
+            <a 
+              href="https://wa.me/5519994566887" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-nav group"
+            >
+              Orçamento rápido
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          {/* Mobile Toggle */}
+          <button 
+            className={`md:hidden z-[80] p-2 rounded-full transition-colors relative ${
+              isMobileMenuOpen 
+                ? 'text-white hover:bg-white/10' 
+                : isScrolled 
+                  ? 'text-slate-900 hover:bg-slate-100' 
+                  : 'text-white hover:bg-white/10'
+            }`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile Toggle */}
-        <button 
-          className={`md:hidden z-[60] p-2 rounded-full transition-colors relative ${
-            isMobileMenuOpen 
-              ? 'text-white hover:bg-white/10' 
-              : isScrolled 
-                ? 'text-slate-900 hover:bg-slate-100' 
-                : 'text-white hover:bg-white/10'
-          }`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Menu"
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Outside nav to prevent backdrop-filter fixed positioning containing block bug */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Intensive Backdrop Blur Overlay */}
+            {/* Intensive Backdrop Overlay */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 h-screen w-screen bg-slate-950/60 backdrop-blur-2xl z-40 md:hidden"
+              className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[60] md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -146,10 +147,10 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 220 }}
-              className="fixed top-0 right-0 h-full max-h-screen w-[85%] max-w-[320px] bg-slate-900/95 text-white border-l border-slate-800/80 z-50 md:hidden flex flex-col p-6 pt-20 shadow-2xl justify-between overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-[300px] bg-slate-900 text-white border-l border-slate-800 z-[70] md:hidden flex flex-col p-6 pt-20 shadow-2xl justify-between overflow-y-auto"
             >
-              <div className="flex flex-col gap-4">
-                <div className="border-b border-slate-800 pb-3 mb-2">
+              <div className="flex flex-col gap-5">
+                <div className="border-b border-slate-800 pb-3">
                   <span className="font-display font-black text-xl tracking-[0.25em] text-blue-500">DUNO</span>
                   <div className="text-[10px] text-slate-400 mt-0.5 uppercase tracking-widest font-mono">ENGENHARIA DE VIDROS</div>
                 </div>
@@ -163,7 +164,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 + idx * 0.05 }}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-base font-medium text-slate-200 hover:text-blue-400 py-1.5 border-b border-slate-800/55 transition-colors"
+                      className="text-base font-medium text-slate-200 hover:text-blue-400 py-2 border-b border-slate-800/50 transition-colors"
                     >
                       {link.name}
                     </motion.a>
@@ -175,7 +176,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex flex-col gap-2 pt-4"
+                className="pt-4"
               >
                 <div className="text-[10px] text-center text-slate-500 font-mono">
                   SUPORTE E ENGENHARIA 100% CUMPRINDO ABNT
@@ -185,7 +186,7 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
 
@@ -533,27 +534,27 @@ const Services = () => {
     <motion.div 
       key={s.title}
       variants={itemVariants}
-      whileHover={{ y: -8 }}
-      className="group bg-white rounded-[32px] overflow-hidden border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/10 hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+      whileHover={{ y: -6 }}
+      className="group bg-white rounded-2xl overflow-hidden border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/10 hover:shadow-xl transition-all duration-300 flex flex-col"
     >
-      <div className="relative h-60 overflow-hidden">
+      <div className="relative h-44 overflow-hidden">
         <img 
           src={s.img} 
           alt={s.title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="absolute top-4 right-4">
-          <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white border border-white/30">
-            <ArrowRight className="w-5 h-5" />
+        <div className="absolute top-3 right-3">
+          <div className="w-8 h-8 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center text-white border border-white/30">
+            <ArrowRight className="w-4 h-4" />
           </div>
         </div>
       </div>
       
-      <div className="p-8 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold mb-3 group-hover:text-brand-blue transition-colors">{s.title}</h3>
-        <p className="text-slate-500 mb-6 text-sm leading-relaxed flex-grow">
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-lg font-bold mb-2 group-hover:text-brand-blue transition-colors">{s.title}</h3>
+        <p className="text-slate-500 mb-4 text-xs leading-relaxed flex-grow">
           {s.desc}
         </p>
         
@@ -561,10 +562,10 @@ const Services = () => {
           href={`https://wa.me/5519994566887?text=${encodeURIComponent(s.whatsappMsg)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-whatsapp group justify-center py-3.5 text-sm"
+          className="btn-whatsapp group justify-center py-2.5 text-xs font-semibold"
         >
           Pedir orçamento
-          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
     </motion.div>
