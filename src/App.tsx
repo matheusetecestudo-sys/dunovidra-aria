@@ -581,7 +581,7 @@ const Services = () => {
           href={`https://wa.me/5519987212422?text=${encodeURIComponent(s.whatsappMsg)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full group/btn inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
+          className="btn-whatsapp w-full group/btn justify-center text-center text-sm font-semibold py-3 px-4 rounded-xl"
         >
           <span>Pedir orçamento</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
